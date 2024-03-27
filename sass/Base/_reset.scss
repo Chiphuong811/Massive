@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+}
+body,html{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: $fs-0;
+    font-weight: $fw-0;
+    color: $color-black-0;
+    background-color: $color-white-0;
+    line-height: $lh-1;
+}
+body{
+    overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6{
+    color:$color-black-3;
+    text-transform: uppercase;
+}
+button:focus{
+    outline: none;
+}
+a{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}
+::selection {
+    color: $color-white-0;
+    background: $color-brown-0;
+    text-shadow: none;
+}

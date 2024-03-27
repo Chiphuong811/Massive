@@ -1,0 +1,96 @@
+.tabs {
+    background: url(../img/pattern-2.png);
+    @include styleImg(100%);
+    @extend %backgroundImg1;
+    padding: $p-0 0;
+    margin-bottom: $mg-5 - 5;
+    ul {
+        .nav-item {
+            margin-left: $mg-1;
+            &:first-child {
+                margin: 0;
+            }
+            .nav-link {
+                background-color: $color-background-4;
+                border-radius: 0;
+                padding: $p-5 + 5 $p-10;
+                position: relative;
+                &.active {
+                    background-color: white;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: -7px;
+                        left: 50%;
+                        margin-left: $p-3 + 5;
+                        width: $w-3;
+                        height: $w-3;
+                        border-bottom: 1px solid $color-white-0;
+                        border-left: 1px solid $color-white-0;
+                        background-color: $color-white-0;
+                        transform: rotate(-45deg);
+                    }
+                }
+                /* img {
+                    width: 100%;
+                } */
+                &:hover {
+                    background-color: white;
+                    &::after {
+                        position: absolute;
+                        bottom: -7px;
+                        left: 50%;
+                        margin-left: $p-3 + 5;
+                        width: $w-3;
+                        height: $w-3;
+                        border-bottom: 1px solid $color-white-0;
+                        border-left: 1px solid $color-white-0;
+                        background-color: $color-white-0;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+    .tabs_items {
+        padding: $p-5 0;
+        .tab-pane {
+            span {
+                @include styleText2($color-gray-0,$fs-0 - 1,$ls-0);
+            }
+            h1 {
+                letter-spacing: $ls-0;
+                font-size: $fs-6;
+                margin: $mg-5 - 2 0 $mg-2;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+    @include responsive("medium") {
+        .tabs{
+            padding: $mg-2 0;
+        ul {
+            display: block;
+            margin: 0 $mg-4;
+            .nav-item {
+                margin: 0;
+                margin-bottom: $mg-6;
+                &:first-child{
+                    margin-bottom: $mg-6;
+                }
+                .nav-link{
+                    text-align: center;
+                }
+            }
+        }
+        .tabs_items{
+            @include paddingStyle ($p-5, $p-5);
+            .tab-pane{
+                h1{
+                    font-size: $fs-3 + 2;
+                }
+            }
+        }
+    }
+}

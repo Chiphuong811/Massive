@@ -1,0 +1,39 @@
+.title {
+    text-align: center;
+    margin-bottom: $mg-2;
+    h1 {
+        @include styleText($color-black-3, $fs-1, $fw-0);
+        letter-spacing: $ls-0;
+        &::after {
+            content: "";
+            width: $w-1;
+            height: 1.5px;
+            background-color: $color-gray-9;
+            display: block;
+            margin: $mg-1 auto;
+        }
+    }
+    p {
+        @include styleText($color-gray-0, $fs-0, $fw-0);
+        margin: $mg-1 auto;
+        width: 60%;
+    }
+    @include responsive("medium"){
+        h1{
+            @include styleText($color-black-3, 18px, $fw-0);
+            &::after{
+                content: '';
+                margin: $mg-6 auto $mg-1 auto;
+            }
+        }
+        p{
+            margin: 0 auto;
+        }
+    }
+    @include responsive("screen3"){
+        p{
+            width: 100%;
+            @include paddingStyle($p-5, $p-5);
+        }
+    }
+}

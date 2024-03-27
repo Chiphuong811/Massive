@@ -1,0 +1,74 @@
+@mixin styleText($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin styleText2($color, $fs, $ls){
+    color: $color;
+    font-size: $fs;
+    letter-spacing: $ls;
+}
+
+@mixin styleImg($h) {
+    background-attachment: fixed;
+    height: $h;
+    position: relative;
+}
+
+@mixin paddingStyle ($p-l, $p-r) {
+    padding-left: $p-l;
+    padding-right: $p-r;
+}
+
+@mixin hoverImg {
+    .info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.3s;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        border: $mg-1 solid $color-black-5;
+        background-color: $color-background-1;
+        &:hover {
+            opacity: 1;
+            .content-icon {
+                transform: translateY(55%);
+            }
+            .link-item {
+                transform: translateY(-45%);
+            }
+        }
+        .content-icon {
+            position: absolute;
+            top: 0;
+            transform: translateY(-55%);
+            text-align: center;
+            transition: all 0.3s;
+            opacity: 1;
+        }
+        .link-item {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            transform: translateY(45%);
+            transition: all 0.3s;
+            opacity: 1;
+        }
+    }
+}
+
+/* RESPONSIVE */
+@mixin responsive($screen) {
+    @if map-has-key($map: $breakpoints , $key: $screen){
+        $value: map-get($map: $breakpoints, $key: $screen);
+        @media screen and (max-width:$value){
+            @content; 
+        }
+    }@else{
+        @warn "`{$screen}` isn't exist in breakpoint";
+    }
+}

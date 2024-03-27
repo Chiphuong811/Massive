@@ -1,0 +1,126 @@
+.skills {
+    position: relative;
+    .skill__img {
+        background: url("../img/parrallax.jpg") no-repeat;
+        background-size: cover;
+        @include styleImg(100%);
+        width: 100%;
+        .skill__title {
+            width: 100%;
+            padding: $p-0 0;
+            position: relative;
+            display: inline-block;
+            .overlay {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                width: 50%;
+                height: 100%;
+                content: "";
+                background: $color-background-0;
+            }
+            .skill__left {
+                width: 100%;
+                height: 400px;
+                display: table;
+                vertical-align: middle;
+                h1 {
+                    display: table-cell;
+                    text-align: center;
+                    vertical-align: middle;
+                    @include styleText2($color-white-0,$fs-1,$ls-2);
+                }
+            }
+            .skill-colbar {
+                @include paddingStyle ($p-5,$p-5);
+                .skill__right {
+                    padding: 0 $p-5;
+                    color: $color-white-0;
+                    .skills__content {
+                        h1 {
+                            @include styleText2($color-white-0,$fs-3,$ls-0);
+                            text-transform: uppercase;
+                            margin-bottom: $mg-4;
+                            line-height: $lh-0;
+                        }
+                        p {
+                            margin-bottom:$mg-4 ;
+                            color: $color-white-0;
+                            line-height: $lh-3;
+                        }
+                    }
+                    .skills__bars {
+                        padding-top: $p-5;
+                        .progress {
+                            border-radius: 0;
+                            overflow: visible;
+                            margin: $mg-6 0 $mg-2 0;
+                            .progress-bar {
+                                span {
+                                    @include styleText($color-black-1,$fs-4,normal);
+                                    position: absolute;
+                                    top: -28px;
+                                    right: -5px;
+                                    min-width: 25px;
+                                    height: $w-3 + 5;
+                                    padding: 0 $p-8;
+                                    text-align: center;
+                                    border-radius: $br-1;
+                                    line-height: $lh-6;
+                                    background-color: $color-gray-3;
+                                    overflow: visible;
+                                    &::before {
+                                        position: absolute;
+                                        bottom: -2px;
+                                        left: 50%;
+                                        width: 5px;
+                                        height: 5px;
+                                        border-bottom: 1px solid $color-gray-3;
+                                        border-left: 1px solid $color-gray-3;
+                                        background-color: $color-gray-3;
+                                        content: "";
+                                        /* overflow: visible; */
+                                        transform: rotate(45deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("large") {
+        .skill__img {
+            .skill__title {
+                .overlay {
+                    background: transparent;
+                }
+            }
+        }
+    }
+    @include responsive("medium") {
+        .skill__img {
+            .skill__title {
+                padding: $p-6 + 5 0;
+                .skill__left {
+                    h1 {
+                        font-size: $fs-3;
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("small"){
+        .skill__img {
+            .skill__title {
+                .skill__left {
+                    h1 {
+                        padding: 0 $p-5;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,204 @@
+header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    transition: all 0.7s ease;
+    /* box-shadow: 0 2px 2px rgb(0 0 0 / 10%); */
+    .navbar__top {
+        position: relative;
+        padding: 0 $p-5;
+        top: 0;
+        left: 0;
+        color: $color-white-0;
+        width: 100%;
+        justify-content: space-between;
+        background-color: transparent;
+        /* transition: .7s; */
+        .navbar__logo {
+            padding: 0;
+            .navbar-brand {
+                position: relative;
+                padding: 0;
+                height: 100px;
+                width: 100%;
+                transition: all 0.7s ease;
+                img {
+                    width: 103.04px;
+                    height: 96px;
+                    padding: $p-11 0;
+                    transition: all 0.7s ease;
+                }
+            }
+        }
+        .navbar-collapse {
+            display: none;
+            justify-content: flex-end;
+            .navbar__content {
+                .header__menu {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: all 0.7s;
+                    margin-bottom: 0;
+                    .header__li {
+                        //dropdown
+                        position: relative;
+                        padding: 0 $p-11 + 5;
+                        list-style: none;
+                        display: inline-block;
+                        &:hover {
+                            .menu_drop {
+                                display: block;
+                            }
+                        }
+                        .nav-link {
+                            //dropbtn
+                            position: relative;
+                            padding: $p-8 + 1 $p-11 + 2 $p-5 + 3 $p-11 + 2;
+                            transition: all 0.5s;
+                            @include styleText2($color-white-0,$fs-0 - 2,$ls-1);
+                            &.active {
+                                color: $color-brown-0;
+                            }
+                            &:hover {
+                                color: $color-brown-0;
+                            }
+                        }
+                    }
+                    .mega-li {
+                        &:hover {
+                            .megamenu {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("screen4") {
+        .navbar__top {
+            .navbar-collapse {
+                .navbar__content {
+                    .header__menu {
+                        .header__li {
+                            a.nav-link {
+                                padding: $p-8 + 1 $p-11 - 1 $p-5 + 3 $p-11 ;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("screen5") {
+        .navbar__top {
+            padding: 0 $p-9 + 2;
+            .navbar-collapse {
+                margin-left: 0;
+                margin-top: $mg-10;
+                .navbar__content {
+                    .header__menu {
+                        .header__li {
+                            padding: 0 $p-11 + 5 0 $p-11 + 3;
+                            a.nav-link {
+                                padding: $p-8 + 1 0 $p-5 + 3 ;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("extra-large") {
+        .navbar__top {
+            .navbar-collapse {
+                .navbar__content {
+                    .header__menu {
+                        .header__li {
+                            a.nav-link {
+                                padding: $p-8 + 1 $p-11 - 1 $p-5 + 3 $p-11;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive("large") {
+        .navbar__top {
+            padding: 0 $p-8 - 3;
+            .navbar__logo{
+                .navbar-brand{
+                    img{
+                        height: 80px;
+                        width: auto;
+                    }
+                }
+            }
+            .navbar-collapse {
+                .navbar__content {
+                    .header__menu {
+                        .header__li {
+                            padding: 0 $p-11 + 5 0 0;
+                            a.nav-link {
+                                padding: $p-8 + 1 0 $p-5 + 1 ;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive ("screen7"){
+        .navbar__top{
+            padding: 0 $p-11 + 5;
+            .navbar__logo{
+                .navbar-brand{
+                    img{
+                        height: 68px;
+                    }
+                }
+            }
+        }
+    }
+}
+    @include responsive("medium") {
+        header {
+            transition: none;
+            position: fixed;
+            z-index: 1200;
+            width: 100%;
+            .navbar__top {
+                background: $color-black-8;
+                height: 50px;
+                .navbar__logo {
+                    .navbar-brand {
+                        transition: none;
+                        height: 50px;
+                        img {
+                            height: 50px;
+                            width: auto;
+                            transition: none;
+                        }
+                    }
+                }
+                .navbar-collapse{
+                    margin-top: $mg-1 - 2;
+                    .navbar__content{
+                        .header__menu{
+                            .header__li{
+                                .nav-link{
+                                    padding-bottom: $p-9 - 3;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+

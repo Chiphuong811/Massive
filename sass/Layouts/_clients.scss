@@ -1,0 +1,119 @@
+.clients {
+    .comments {
+        padding: $p-0 0;
+        .comnent_carousel {
+            .comment__item {
+                text-align: center;
+                padding: 0 $mg-4;
+                img {
+                    display: inline-block;
+                    width: 100px;
+                    height: auto;
+                    border-radius: 50%;
+                    margin-bottom: $mg-4;
+                }
+                .comment__content {
+                    p {
+                        @include styleText($color-gray-0, $fs-0 + 1, normal);
+                        padding: 0 $p-4;
+                        text-align: center;
+                        font-style: italic;
+                        margin-bottom: $mg-4;
+                    }
+                    .info-client {
+                        display: inline-block;
+                        text-transform: uppercase;
+                        letter-spacing: $ls-0;
+                        margin-bottom: $mg-6;
+                        h6 {
+                            @include styleText($color-black-1, $fs-0 - 1, normal);
+                            margin-bottom: 0;
+                        }
+                        span {
+                            @include styleText($color-gray-11, $fs-4 + 2, normal);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .logo {
+        padding: $p-0 0;
+    }
+    @include responsive("extra-large") {
+        .comments {
+            .comnent_carousel {
+                .comment__item {
+                    img{
+                        margin-bottom: 0;
+                    }
+                    .comment__content {
+                        margin: $mg-1;
+                        text-align: center;
+                        p {
+                            @include paddingStyle (0, 0);
+                        }
+                    }
+                }
+            }
+        }
+        .logo {
+            @include paddingStyle ($mg-4, $mg-4);
+            .logo-carousel {
+                img {
+                    max-width: 330px;
+                }
+            }
+        }
+    }
+    @include responsive("large") {
+        .comments {
+            .comment_cont {
+                @include paddingStyle ($mg-4, $mg-4);
+                .comment__item{
+                    padding: 0 $mg-1 - 5;
+                }
+            }
+        }
+        .logo {
+            @include paddingStyle ($mg-4, $mg-4);
+            .logo__conta {
+                @include paddingStyle (0, 0);
+                img {
+                    padding: 0 $mg-6 - 5;
+                    max-width: 300px;
+                    height: auto;
+                }
+            }
+        }
+    }
+    @include responsive ("medium"){
+        .comments{
+            padding: $mg-2 0;
+        }
+        .logo{
+            padding: $mg-2 0;
+        }
+    }
+    @include responsive("small") {
+        .logo {
+            @include paddingStyle ($mg-4, $mg-4);
+            .logo-carousel {
+                img {
+                    max-width: 185px;
+                    padding-left: $mg-4;
+                }
+            }
+        }
+    }
+    @include responsive("screen1") {
+        .logo {
+            .logo-carousel{
+                img{
+                    max-width: 378px;
+                    /* padding-left: 10px; */
+                }
+            }
+        }
+    }
+}

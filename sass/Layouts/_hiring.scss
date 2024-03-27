@@ -1,0 +1,96 @@
+.hiring {
+    margin-bottom: $mg-3;
+    .hiring__all {
+        display: flex;
+        background: $color-white-1;
+        padding: $p-6 - 5;
+        margin: $mg-3 $mg-6 + 5 0;
+        align-items: center;
+        .hiring__content {
+            h3 {
+                @include styleText($color-black-3, $fs-3, normal);
+                span {
+                    color: $color-brown-0;
+                }
+            }
+            p {
+                margin-top: $mg-6;
+                color: $color-gray-0;
+            }
+        }
+        .hiring__button {
+            padding: 0;
+            a {
+                @include styleText($color-white-0, $fs-3 - 4, normal);
+                padding: $p-8 $p-5;
+                background: $color-black-1;
+                border-radius: 0;
+                letter-spacing: 1px;
+                text-align: right;
+                transition: all 0.5s;
+            }
+            :hover {
+                background-color: $color-brown-0;
+            }
+        }
+    }
+    @include responsive("extra-large") {
+        .hiring__all{
+            margin-left: 0;
+            margin-right: 0;
+        .hiring__button {
+            margin-left: $mg-2;
+        }
+    }
+}
+}
+@include responsive("large") {
+    .container-md {
+        @include paddingStyle (0,0);
+        .hiring__all {
+            margin: $mg-3 0 $mg-2;
+            .hiring__content {
+                padding: 0;
+                p {
+                    margin-right: 30px + 5; //35px
+                }
+            }
+            .hiring__button {
+                margin-left: 0;
+                a {
+                    padding: $p-8 $p-9 + 0.7;
+                }
+            }
+        }
+    }
+    @include responsive("medium") {
+        .container-md{
+        .hiring__all {
+            display: block;
+            margin: $mg-3 $mg-4 $mg-2;
+            .hiring__content {
+                p {
+                    margin-right: 0;
+                }
+            }
+            .hiring__button {
+                margin-top: $mg-1;
+            }
+        }
+    }
+    }
+   /*  @include responsive("small") {
+        .container-md{
+        .hiring__all {
+            .hiring__content {
+                p {
+                    margin-right: 0;
+                }
+            }
+            .hiring__button {
+                margin-top: 20px;
+            }
+        }
+    }
+} */
+}

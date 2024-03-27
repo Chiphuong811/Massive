@@ -1,0 +1,43 @@
+.banner{
+    background-image: url('../img/parrallax-8.jpg');
+    @extend %backgroundImg1;
+    background-attachment: fixed;
+    padding: $p-7 0;
+    text-align: center;
+    .banner__content{
+        text-transform: uppercase;
+        span{
+            @include styleText($color-brown-0, $fs-0 + 1,normal);
+            letter-spacing: $ls-3;
+        }
+        h1{
+            @include styleText($color-white-2, $fs-5,normal);
+            line-height: $lh-4;
+            letter-spacing: $ls-0;
+        }
+    }
+    button{
+        margin-top: $mg-2;
+        a{
+            @include styleText($color-white-0, $fs-0 - 1, normal);
+            padding: $mg-6 + 5 $mg-4;
+            background-color: $color-brown-0;
+            text-transform: uppercase;
+            letter-spacing: $ls-1;
+            transition: all .5s;
+        }
+        :hover{
+            text-decoration: none;
+            color: $color-black-1;
+            background-color: $color-white-0;
+        }
+    }
+    @include responsive("medium"){
+        .banner__content{
+            h1{
+                line-height: $lh-1 + 1;
+                font-size: $fs-1 + 2;
+            }
+        }
+    }
+}

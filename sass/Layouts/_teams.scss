@@ -1,0 +1,94 @@
+.teams {
+    .team__items {
+        .member_item {
+            padding: 0 $p-5;
+            .team__img {
+                position: relative;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+                .team__intro {
+                    position: absolute;
+                    right: 0;
+                    bottom: 30px;
+                    padding: $p-8 - 5 $p-9 - 3;
+                    text-align: right;
+                    background: $color-background-3;
+                    letter-spacing: $ls-0;
+                    text-transform: uppercase;
+                    transition: all 0.3s;
+                    width: 70%;
+                    h4 {
+                        @include styleText($color-white-0, $fs-0 - 1, normal);
+                        margin: 0;
+                    }
+                    span {
+                        @include styleText($color-background-2, $fs-0 - 3, normal);
+                    }
+                }
+                @include hoverImg;
+                .team__info {
+                    .team__title {
+                        padding: 0 $p-9 - 3;
+                        width: 100%;
+                        h4 {
+                            @include styleText2($color-black-1, $fs-0 - 1, $ls-0 + 2);
+                            margin-bottom: $mg-4;
+                            text-transform: uppercase;
+                        }
+                        p {
+                            margin-bottom: 0;
+                            color: $color-gray-0;
+                            font-size: $fs-0 - 1;
+                        }
+                    }
+                    .team__icon {
+                        font-size: $fs-5 - 1;
+                        a {
+                            @include styleText($color-black-1, $fs-0 + 1, normal);
+                            text-align: center;
+                            margin: 0 $mg-6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("large") {
+        .team__items {
+            margin-left: 0;
+            margin-right: 0;
+            .member_item {
+                padding: 0;
+            }
+        }
+    }
+    @include responsive("screen8") {
+        .team__items {
+            .member_item {
+                .team__img {
+                    .info:hover {
+                        .content-icon {
+                            transform: translateY(254%);
+                        }
+                        .link-item {
+                            transform: translateY(-257%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("small") {
+        .team__items {
+            @include paddingStyle($p-5, $p-5);
+            .member_item {
+                .team__img {
+                    @include hoverImg;
+                }
+            }
+        }
+    }
+}

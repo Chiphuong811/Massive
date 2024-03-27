@@ -1,0 +1,61 @@
+.designs {
+    padding: $p-0 0;
+    .designs__content {
+        padding: 0 0 $mg-2 0;
+    }
+    .designs__items {
+        .des__item {
+            @include paddingStyle($p-5, $p-5);
+            .design-col {
+                padding: $p-5;
+                border: 1px solid $color-white-3;
+                border-radius: $br-0;
+                position: relative;
+                transition: all .5s ease;
+                &:hover{
+                    .des-icon{
+                        background: $color-brown-0;
+                    }
+                }
+                .des-icon {
+                    position: absolute;
+                    top: -30px;
+                    left: 30px;
+                    width: $w-0;
+                    height: $w-0;
+                    text-align: center;
+                    border-radius: $br-0;
+                    background: $color-black-1;
+                    box-shadow: 0 0 0 10px $color-white-0;
+                    padding: 0 0 $p-5 0;
+                    line-height: $lh-5;
+                    transition: all .5s ease;
+                    i {
+                        color: $color-white-0;
+                        font-size: $fs-6;
+                        line-height: $lh-5;
+                    }
+                }
+                h3 {
+                    margin-top: $mg-4;
+                    margin-bottom: $mg-1;
+                    letter-spacing: $ls-1;
+                    @include styleText($color-black-3,$fs-3,normal);
+                }
+                p {
+                    color: $color-gray-0;
+                }
+            }
+        }
+    }
+    @include responsive("extra-large"){
+        .des_cont{
+            @include paddingStyle(0 ,0);
+        }
+    }
+    @include responsive ("large"){
+        .des__item{
+            margin-bottom: $mg-2;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@import './Helpers/mixin';
+@import './Helpers/extend';
+@import './Helpers/variables';
+
+@import './Base/customize';
+@import './Base/reset';
+
+@import './Layouts/header';
+@import './Layouts/designs';
+@import './Layouts/skills';
+@import './Layouts/showcases';
+@import './Layouts/teams';
+@import './Layouts/banner';
+@import './Layouts/blogs';
+@import './Layouts/tabs';
+@import './Layouts/number';
+@import './Layouts/clients';
+@import './Layouts/footer';
+@import './Layouts/hiring';
+@import './Layouts/headerAnimate';
+
+@import './Components/title';
+@import './Components/carousel';
+@import './Components/dropdown';
+@import './Components/backToTop';
+@import './Components/headerResponsive';

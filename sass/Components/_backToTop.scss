@@ -1,0 +1,32 @@
+
+.backToTop {
+    position: fixed;
+    right: $w-3 + 5;
+    bottom: $w-3 + 5;
+    width: 40px;
+    height: 40px;
+    transition: all .5s;
+    text-align: center;
+    color: $color-white-0;
+    background: $color-background-5;
+    line-height: $lh-2 - 5;
+    opacity: 0;
+    &:hover{
+        background-color: $color-brown-0;
+    }
+    i{
+    color: $color-white-0;
+    font-size: $fs-7;
+    text-align: center;
+    line-height: $lh-3 + 5;
+    }
+}
+
+.cd-top--is-visible {
+    visibility: visible;
+    opacity: 1;
+    @media screen and (max-width:800.9px) {
+        opacity: 0;
+        
+    }
+}
